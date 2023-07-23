@@ -4,8 +4,8 @@ import { IconCart } from "./Icon";
 
 export function Content({}: ContentProps) {
     return (
-        <section className="p-20 px-12">
-            <div className="grid grid-cols-2 items-center pl-12 min-h-screen">
+        <section className="p-20 md:px-12 px-4 lg:min-h-screen grid">
+            <div className="grid lg:grid-cols-2 lg:gap-4 gap-10 items-center lg:pl-12">
                 <div className="grid gap-3">
                     <div className="">
                         <h2 className="text-3xl text-gray-600">
@@ -57,13 +57,40 @@ export function Content({}: ContentProps) {
                         </div>
                     </div>
                 </div>
-                <div className="relative">
-                    <div className="absolute bottom-0 right-0 border border-dashed border-white">
-                        <div className="flex justify-between">
-                            <div className="text-amber-200">Discount coupon</div>
-                            <div className="flex gap-2">
-                                <span>Prev</span>
+                <div className="relative h-96 lg:h-full">
+                    <div
+                        className="p-3 absolute bottom-7 right-7 border border-dashed border-gray-400 rounded-lg"
+                        style={{ backgroundColor: "#121212" }}
+                    >
+                        <div className="flex justify-between items-center py-2">
+                            <div className="text-amber-200">
+                                Discount coupon
                             </div>
+                            <div className="flex gap-2 text-white text-xs">
+                                <span>Prev</span>
+                                <span>Next</span>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 py-3 border-t-2 border-dashed border-gray-400 rounded-lg">
+                            <img
+                                src="/pizza.jpeg"
+                                className="w-10 h-10 rounded-full"
+                            />
+                            <span className="text-white">Mexico Pizza</span>
+                            <div className="grid">
+                                <span className="text-gray-500 line-through text-sm">
+                                    $12.00
+                                </span>
+                                <span className="text-amber-200">$8.00</span>
+                            </div>
+                            <Button variant="outline">
+                                <div className="flex gap-2 py-1">
+                                    <span className="bg-amber-200 text-black w-7 h-7 flex justify-center items-center rounded-full">
+                                        <IconCart />
+                                    </span>
+                                    <span>Buy now</span>
+                                </div>
+                            </Button>
                         </div>
                     </div>
                 </div>

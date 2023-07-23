@@ -1,11 +1,12 @@
 import "./App.css";
-import { Content, Header } from "./components";
+import { Content, Header, Shape } from "./components";
 
 function App() {
     return (
         <div>
             <Header />
             <Content />
+            <Shape />
         </div>
     );
 }
