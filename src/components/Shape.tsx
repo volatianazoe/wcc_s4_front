@@ -3,7 +3,10 @@ import { PropsWithChildren } from "react";
 export function Shape({}: ShapeProps) {
     return (
         <div className="absolute top-0 right-0 h-full -z-50">
-            <div className="md:block hidden absolute top-1/4 left-10 w-52 h-52">
+            <div
+                className="md:block hidden absolute top-1/4 w-52 h-52"
+                style={{ left: "39%" }}
+            >
                 <img
                     src="/1.png"
                     className="h-full w-full object-contain"
